@@ -1,0 +1,4 @@
+﻿  10757.cpp
+c:\users\say\documents\github\algorithm\10757\10757\10757.cpp(6): warning C4101: 'c' :참조되지 않은 지역 변수입니다.
+  10757.vcxproj -> C:\Users\say\Documents\GitHub\Algorithm\10757\Debug\10757.exe
+  10757.vcxproj -> C:\Users\say\Documents\GitHub\Algorithm\10757\Debug\10757.pdb (Partial PDB)
