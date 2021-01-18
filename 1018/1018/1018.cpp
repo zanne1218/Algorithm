@@ -14,19 +14,31 @@ int main() {
 			cin >> map[i][j];
 		}
 	}
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			if (i % 2 == 0 && j % 2 == 0 && map[i][j] != 'W')
-				cnt1++;
-			if (i % 2 == 1 && j % 2 == 1 && map[i][j] != 'B')
-				cnt1++;
-			if (i % 2 == 0 && j % 2 == 0 && map[i][j] != 'B')
-				cnt2++;
-			if (i % 2 == 1 && j % 2 == 1 && map[i][j] != 'W')
-				cnt2++;
+	string chess_black[8] = {
+		"BWBWBWBWBW",
+		"WBWBWBWBWB",
+		"BWBWBWBWBW",
+		"WBWBWBWBWB",
+		"BWBWBWBWBW",
+		"WBWBWBWBWB",
+		"BWBWBWBWBW",
+		"WBWBWBWBWB"
+	};
+	string chess_white[8] = {
+		"WBWBWBWBWB",
+		"BWBWBWBWBW",
+		"WBWBWBWBWB",
+		"BWBWBWBWBW",
+		"WBWBWBWBWB",
+		"BWBWBWBWBW",
+		"WBWBWBWBWB",
+		"BWBWBWBWBW"
+	};
+	for (int i = 0; i < n - 8; i++) {
+		for (int j = 0; j < m - 8; j++) {
+			
 		}
 	}
-	cout << (cnt1 < cnt2) ? cnt1 : cnt2;
 	for (int i = 0; i < n; i++) {
 		delete[] map[i];
 	}
