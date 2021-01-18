@@ -12,11 +12,13 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			cin >> map[i][j];
-			if ((i % 2 == 0 && j % 2 == 0 && map[i][j] != 'W') ||
-				(i % 2 == 1 && j % 2 == 0 && map[i][j] != 'B'))
+			if (i % 2 == 0 && j % 2 == 0 && map[i][j] != 'W')
 				cnt1++;
-			if ((i % 2 == 0 && j % 2 == 0 && map[i][j] != 'B') ||
-				(i % 2 == 1 && j % 2 == 0 && map[i][j] != 'W'))
+			if (i % 2 == 1 && j % 2 == 0 && map[i][j] != 'B')
+				cnt1++;
+			if (i % 2 == 0 && j % 2 == 0 && map[i][j] != 'B')
+				cnt2++;
+			if (i % 2 == 1 && j % 2 == 0 && map[i][j] != 'W')
 				cnt2++;
 		}
 	}
