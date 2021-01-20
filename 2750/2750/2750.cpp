@@ -3,24 +3,27 @@
 using namespace std;
 
 int main() {
-	int n;
+	int n, tmp, cnt;
 	int *arr;
 	cin >> n;
-	for (int i = 0; i< n; i++) {
+	arr = new int[n];
+	for (int i = 0; i < n; i++) {
 		cin >> arr[i];
 	}
-
-	int tmp;
-	for (int j = 0; j < n; j++) {
-		for (int k = 0; k < n - 1 - j; k++) {
-			if (arr[k] > arr[k + 1]) {
-				tmp = arr[k];
-				arr[k] = arr[k + 1];
-				arr[k + 1] = tmp;
+	while (true) {
+		cnt = 0;
+		for (int i = 0; i < n - 1; i++) {
+			if (arr[i] > arr[i + 1]) {
+				tmp = arr[i];
+				arr[i] = arr[i + 1];
+				arr[i + 1] = tmp;
+				cnt++;
 			}
 		}
+		if (cnt == 0)
+			break;
 	}
-	for(int i = 0; i< n; i++) {
+	for (int i = 0; i < n; i++) {
 		cout << arr[i] << endl;
 	}
 	return 0;
