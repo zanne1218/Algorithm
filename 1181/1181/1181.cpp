@@ -18,6 +18,8 @@ int main() {
 	for (int i = 0; i <= 50; i++) {
 		sort(arr[i].begin(), arr[i].end());
 		for (int j = 0; j < arr[i].size(); j++) {
+			if (j > 0 && arr[i][j] == arr[i][j - 1])
+				continue;
 			cout << arr[i][j] << "\n";
 		}
 	}
